@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --bgc: #171717;
+  --heading: #e5e5e5;
+  --text: #d4d4d4;
+  --primary: #ecf422;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: var(--bgc);
+  color: var(--text);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#btn-container{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 1rem;
+}
+#startbtn {
+  padding: 25px 30px;
+  background-color: transparent;
+  color: var(--primary);
+  font-weight: bold;
+  width: 150px;
+  height: 150px;
+  border: none;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 100%;
+  animation: waves 0.90s linear 1s infinite alternate;
+}
+#stopbtn{
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    border: 1px solid transparent;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+#stopbtn i{
+    height: 100%;
+    width: 100%;
+    transition: all 500ms ease ;
+}
+#stopbtn i:hover{
+    color: var(--primary);
+}
+#startbtn:hover {
+    z-index: 1;
+    background: var(--primary);
+    color: var(--bgc);
+    box-shadow: 0 0 5px var(--primary), 0 0 25px var(--primary),
+    0 0 50px var(--primary), 0 0 200px var(--primary);
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
+}
+@keyframes waves {
+    0% {
+        box-shadow: 0 0 5px var(--primary), 0 0 100px var(--primary);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--primary), 0 0 80px var(--primary);
+  }
+  100% {
+    box-shadow: 0 0 20px var(--primary), 0 0 60px var(--primary);
+  }
+}
