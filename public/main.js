@@ -61,8 +61,7 @@ recognition.onresult = (e) => {
 
     let input = transcript.split("");
     input.splice(0, 11);
-    input.pop();
-    input = input.join("").split(" ").join("+");
+    input = input.join("").replaceAll(".","").split(" ").join("+");
     window.open(`https://www.google.com/search?q=${input}`);
   } else if (transcript.includes("search on youtube for")) {
     speechOut("here the result I found on youtube");
